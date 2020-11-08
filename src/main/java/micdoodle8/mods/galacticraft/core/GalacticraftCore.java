@@ -634,7 +634,7 @@ public class GalacticraftCore
         GameRegistry.registerTileEntity(TileEntityLandingPad.class, "Landing Pad Full");
         GameRegistry.registerTileEntity(TileEntitySpaceStationBase.class, "Space Station");
         GameRegistry.registerTileEntity(TileEntityMulti.class, "Dummy Block");
-        GameRegistry.registerTileEntity(TileEntityOxygenSealer.class, "Air Sealer");
+        //GameRegistry.registerTileEntity(TileEntityOxygenSealer.class, "Air Sealer");
         GameRegistry.registerTileEntity(TileEntityDungeonSpawner.class, "Dungeon Boss Spawner");
         GameRegistry.registerTileEntity(TileEntityOxygenDetector.class, "Oxygen Detector");
         GameRegistry.registerTileEntity(TileEntityBuggyFueler.class, "Buggy Fueler");
