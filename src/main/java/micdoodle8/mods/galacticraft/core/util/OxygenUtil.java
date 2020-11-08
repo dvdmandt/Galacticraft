@@ -1,5 +1,7 @@
 package micdoodle8.mods.galacticraft.core.util;
 
+import java.util.HashSet;
+
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -20,7 +22,12 @@ import micdoodle8.mods.galacticraft.core.items.ItemOxygenMask;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.oxygen.OxygenPressureProtocol;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygenDistributor;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockEnchantmentTable;
+import net.minecraft.block.BlockFarmland;
+import net.minecraft.block.BlockLiquid;
+import net.minecraft.block.BlockPistonBase;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.GuiScreen;
@@ -34,9 +41,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import java.util.ArrayList;
-import java.util.HashSet;
 
 public class OxygenUtil
 {
@@ -216,6 +220,7 @@ public class OxygenUtil
             return -1;
         }
 
+        /* Old code, checks for sealed enviroments -> RECURSION!
         //Test for non-sided permeable or solid blocks first
         boolean permeableFlag = false;
         if (!(block instanceof BlockLeavesBase))
@@ -272,7 +277,7 @@ public class OxygenUtil
                     }
                 }
             }
-        }
+        }*/
 
         return -1;
     }
