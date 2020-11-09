@@ -20,7 +20,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockOxygenSealer extends BlockAdvancedTile implements ItemBlockDesc.IBlockShiftDesc
+public class BlockOxygenSealer extends Block implements ItemBlockDesc.IBlockShiftDesc
 {
     private IIcon iconMachineSide;
     private IIcon iconSealer;
@@ -58,7 +58,7 @@ public class BlockOxygenSealer extends BlockAdvancedTile implements ItemBlockDes
         this.iconOutput = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_input");
     }
 
-    @Override
+    /*@Override
     public boolean onUseWrench(World par1World, int x, int y, int z, EntityPlayer par5EntityPlayer, int side, float hitX, float hitY, float hitZ)
     {
         int change = 0;
@@ -95,7 +95,7 @@ public class BlockOxygenSealer extends BlockAdvancedTile implements ItemBlockDes
     {
         entityPlayer.openGui(GalacticraftCore.instance, -1, world, x, y, z);
         return true;
-    }
+    }*/
 
     @Override
     public IIcon getIcon(int side, int metadata)
@@ -143,11 +143,11 @@ public class BlockOxygenSealer extends BlockAdvancedTile implements ItemBlockDes
         world.setBlockMetadataWithNotify(x, y, z, change, 3);
     }
 
-    @Override
+    /*@Override
     public TileEntity createTileEntity(World world, int metadata)
     {
         return new TileEntityOxygenSealer();
-    }
+    }*/
 
     @Override
     public void breakBlock(World world, int x, int y, int z, Block block, int par6)
