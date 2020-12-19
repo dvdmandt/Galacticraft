@@ -97,6 +97,8 @@ public class GuiCelestialSelection extends GuiScreen
     protected int lastMovePosY = -1;
     protected boolean errorLogged = false;
 
+    private int planetClickSnapInPixels = 5;
+
     public GuiCelestialSelection(boolean mapMode, List<CelestialBody> possibleBodies)
     {
     	this.translation.x = 0.0F;
@@ -898,7 +900,7 @@ public class GuiCelestialSelection extends GuiScreen
                     continue;
                 }
 
-                float iconSize = e.getValue().z; // Z value holds size on-screen
+                float iconSize = e.getValue().z + planetClickSnapInPixels; // Z value holds size on-screen
 
                 if (mouseX >= e.getValue().x - iconSize && mouseX <= e.getValue().x + iconSize && mouseY >= e.getValue().y - iconSize && mouseY <= e.getValue().y + iconSize)
                 {
